@@ -1,7 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"gioui.org/app"
+)
 
 func main() {
-	fmt.Println("Hello, World!")
+	go func ()  {
+		//create new window
+		w := new(app.Window)
+		//listen for events in the window
+		for {
+			w.Event()
+		}
+	}()
+
+	app.Main()
 }
